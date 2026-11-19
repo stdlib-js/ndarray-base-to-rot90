@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-to-rot90
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var toRot90 = require( '@stdlib/ndarray-base-to-rot90' );
+import toRot90 from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-rot90@esm/index.mjs';
 ```
 
 #### toRot90( x, dims, k )
@@ -78,7 +60,7 @@ var toRot90 = require( '@stdlib/ndarray-base-to-rot90' );
 Returns a new ndarray where an ndarray is rotated 90 degrees in a specified plane.
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
 // returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
@@ -119,10 +101,15 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var toRot90 = require( '@stdlib/ndarray-base-to-rot90' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+import toRot90 from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-rot90@esm/index.mjs';
 
 // Create a 2x3 matrix:
 var x = array( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] );
@@ -156,6 +143,10 @@ arr = ndarray2array( y );
 y = toRot90( x, [ 1, 0 ], 1 );
 arr = ndarray2array( y );
 // returns [ [ 4, 1 ], [ 5, 2 ], [ 6, 3 ] ]
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -187,7 +178,7 @@ arr = ndarray2array( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
